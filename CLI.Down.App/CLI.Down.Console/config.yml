@@ -1,20 +1,32 @@
 ﻿config:
   parallel_downloads: 3
-  download_dir: ./downloads/linux-images
+  download_dir: D:\Backup
 downloads:
-- url: https://releases.ubuntu.com/20.04.2/ubuntu-20.04.2-live-server-amd64.iso
-  file: ubuntu-20.04.2-live-server-amd64.iso
-  sha256: d1f2bf834bbe9bb43faf16f9be992a6f3935e65be0edece1dee2aa6eb1767423
+#- url: https://releases.ubuntu.com/20.04.2/ubuntu-20.04.2-live-server-amd64.iso
+#  file: ubuntu-20.04.2-live-server-amd64.iso
+#  sha256: d1f2bf834bbe9bb43faf16f9be992a6f3935e65be0edece1dee2aa6eb1767423
+#  overwrite: true
+#- url: https://cdimage.ubuntu.com/releases/20.10/release/ubuntu-20.10-live-server-arm64.iso
+#  file: ubuntu-20.10-live-server-arm64.iso
+#  overwrite: false
+#- url: http://ftp.halifax.rwth-aachen.de/archlinux/iso/2021.03.01/archlinux-bootstrap-2021.03.01-x86_64.tar.gz
+#  sha1: f0e9a794dbbc2f593389100273a3714d46c5cecf
+#  file: archlinux-bootstrap-2021.03.01-x86_64.tar.gz
+#- url: https://download.fedoraproject.org/pub/fedora/linux/releases/33/Server/x86_64/iso/Fedora-Server-netinst-x86_64-33-1.2.iso
+#  file: Fedora-Server-netinst-x86_64-33-1.2.iso
+#  sha256: 1f1f018e78f0cc23d08db0c85952344ea5c200e67b672da5b07507c066a52ccf
+#- url: https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.8.0-amd64-netinst.iso
+#  file: debian-10.8.0-amd64-netinst.iso
+#  sha256: 396553f005ad9f86a51e246b1540c60cef676f9c71b95e22b753faef59f89bee
+- url: https://www.7-zip.org/a/7z2201.exe
+  file: 7z2201.exe
+  sha256: 8c8fbcf80f0484b48a07bd20e512b103969992dbf81b6588832b08205e3a1b43
+- url: https://www.7-zip.org/a/7z2201-arm64.exe
+  file: 7z2201-arm64.exe
+  sha256: 700dea3e4012319a09ccadfce91cf090334cfe658d0bdc42204e77acbea1ef
   overwrite: true
-- url: https://cdimage.ubuntu.com/releases/20.10/release/ubuntu-20.10-live-server-arm64.iso
-  file: ubuntu-20.10-live-server-arm64.iso
+  #sha256: 700dea3e4012319a09ccadfce91cf090334cfe658d0bdc42204e77acbea1ef99
+- url: https://www.7-zip.org/a/7z2201-x64.exe
+  file: 7z2201-x64.exe
   overwrite: false
-- url: http://ftp.halifax.rwth-aachen.de/archlinux/iso/2021.03.01/archlinux-bootstrap-2021.03.01-x86_64.tar.gz
-  sha1: f0e9a794dbbc2f593389100273a3714d46c5cecf
-  file: archlinux-bootstrap-2021.03.01-x86_64.tar.gz
-- url: https://download.fedoraproject.org/pub/fedora/linux/releases/33/Server/x86_64/iso/Fedora-Server-netinst-x86_64-33-1.2.iso
-  file: Fedora-Server-netinst-x86_64-33-1.2.iso
-  sha256: 1f1f018e78f0cc23d08db0c85952344ea5c200e67b672da5b07507c066a52ccf
-- url: https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.8.0-amd64-netinst.iso
-  file: debian-10.8.0-amd64-netinst.iso
-  sha256: 396553f005ad9f86a51e246b1540c60cef676f9c71b95e22b753faef59f89bee
+  sha1: c0dcae7c4c80be25661d22400466b4ea074fc580

@@ -8,6 +8,6 @@ namespace CLI.Down.Service.Contract
 
         YamlConfig? DeserializeYaml(string Path);
 
-        bool IsValid(CommandParser command);
+        bool IsValid(CommandParser arguments, string command);
     }
 }

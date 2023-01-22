@@ -3,11 +3,21 @@ using CLI.Down.Service.Contract;
 using System.Text.RegularExpressions;
 using CLI.Down.Entities.CommandsArgs;
 using YamlDotNet.Serialization.NamingConventions;
+using YamlDotNet.Serialization;
+using System.IO.Abstractions;
 
 namespace CLI.Down.Service.Services
 {
     public class CommandParserService : ICommandParser
     {
+        private readonly IDeserializer _deserializer;
+        private readonly IFileSystem _fileSystem;
+        public CommandParserService(IDeserializer deserializer, IFileSystem fileSystem)
+        {
+            _deserializer = deserializer;
+            _fileSystem = fileSystem;
+        }
+
         public CommandParser? ParseArgs(List<string>? args)
         {
             if (args is null)
@@ -43,15 +53,12 @@ namespace CLI.Down.Service.Services
 
         public YamlConfig? DeserializeYaml(string Path)
         {
-            var deserializer = new YamlDotNet.Serialization.DeserializerBuilder()
-                .WithNamingConvention(CamelCaseNamingConvention.Instance)
-                .Build();
-
             YamlConfig? config;
 
             try
             {
-                config = deserializer.Deserialize<YamlConfig>(File.ReadAllText(Path));
+                var yamlContent = _fileSystem.File.ReadAllText(Path);
+                config = _deserializer.Deserialize<YamlConfig>(yamlContent);
             }
             catch
             {
@@ -61,12 +68,9 @@ namespace CLI.Down.Service.Services
             return config;
         }
 
-        public bool IsValid(CommandParser command)
+        public bool IsValid(CommandParser arguments, string command)
         {
-            if(command is null || string.IsNullOrWhiteSpace(command.YamlPath))
-                return false;
-
-            return true;
+            return (arguments is not null && (command.Equals(Commands.Download) || command.Equals(Commands.Validate))) && _fileSystem.File.Exists(arguments.YamlPath);
         }
     }
 }
