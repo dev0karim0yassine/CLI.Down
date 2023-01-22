@@ -1,14 +1,4 @@
 ﻿using CLI.Down.Service.Contract;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO.Abstractions;
-using System.IO.Pipes;
-using System.Security.Cryptography;
 using CLI.Down.Entities;
 
 namespace CLI.Down.Service.Services

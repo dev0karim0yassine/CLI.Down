@@ -1,11 +1,6 @@
 ﻿using CLI.Down.Service.Contract;
-using System;
-using System.Collections.Generic;
 using System.IO.Abstractions;
-using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CLI.Down.Service.Services
 {

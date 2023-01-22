@@ -2,7 +2,6 @@
 using CLI.Down.Service.Contract;
 using System.Text.RegularExpressions;
 using CLI.Down.Entities.CommandsArgs;
-using YamlDotNet.Serialization.NamingConventions;
 using YamlDotNet.Serialization;
 using System.IO.Abstractions;
 

@@ -1,8 +1,4 @@
 
-
-using CLI.Down.Entities.CommandsArgs;
-using YamlDotNet.Serialization.NamingConventions;
-
 namespace CLI.Down.Service.Tests
 {
     public class CommandParserServiceTest
