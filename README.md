@@ -22,7 +22,8 @@ Task 2:
 - Run the cmd **[dotnet run](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-run)**
 
 this project uses the packages: 
-- *https://www.nuget.org/packages/FluentAssertions*
-- *https://www.nuget.org/packages/Moq*
-- *https://www.nuget.org/packages/AutoFixture*
-- *https://www.nuget.org/packages/YamlDotNet/12.3.1*
+- *[FluentAssertions](https://www.nuget.org/packages/FluentAssertions)*
+- *[Moq](https://www.nuget.org/packages/Moq)*
+- *[AutoFixture](https://www.nuget.org/packages/AutoFixture)*
+- *[YamlDotNet](https://www.nuget.org/packages/YamlDotNet)*
+- *[System.IO.Abstractions](https://www.nuget.org/packages/System.IO.Abstractions)*
